@@ -42,6 +42,11 @@ for tr in root.cssselect("#main_table_blue tbody tr"):
 
     isoSplit = iso.split('/')
 
+    countryCodeSplit = countryCode.split(' ')
+
+    if len(countryCodeSplit) >= 2:
+        countryCode = countryCodeSplit[1]
+
     data = {
         'name': tds[0].text_content().strip(),
         'countryCode': int(countryCode),
