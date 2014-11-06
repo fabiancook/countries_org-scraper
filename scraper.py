@@ -30,7 +30,7 @@ root = lxml.html.fromstring(html)
 
 i = 0
 
-for tr in root.cssselect("#main_table_blue tbody tr")
+for tr in root.cssselect("#main_table_blue tbody tr"):
     i++
     tds = tr.select("td")
 
