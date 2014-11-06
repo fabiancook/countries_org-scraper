@@ -47,6 +47,9 @@ for tr in root.cssselect("#main_table_blue tbody tr"):
     if len(countryCodeSplit) >= 2:
         countryCode = countryCodeSplit[1]
 
+    if len(countryCode.strip()) == 0:
+        countryCode = '-1'
+
     data = {
         'name': tds[0].text_content().strip(),
         'countryCode': int(countryCode),
