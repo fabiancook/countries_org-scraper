@@ -40,7 +40,7 @@ for tr in root.cssselect("#main_table_blue tbody tr"):
     isoSplit = iso.split('/')
 
     data = {
-        'name': tds[0[.text_content().strip(),
+        'name': tds[0].text_content().strip(),
         'countryCode': int(countryCode),
         'countryCodeUnique': i,
         'ISO2': isoSplit[0].strip(),
