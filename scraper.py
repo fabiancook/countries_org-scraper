@@ -21,3 +21,29 @@
 # on Morph for Python (https://github.com/openaustralia/morph-docker-python/blob/master/pip_requirements.txt) and all that matters
 # is that your final data is written to an Sqlite database called data.sqlite in the current working directory which
 # has at least a table called data.
+import scraperwiki
+impot lxml.html
+
+html = scrperwiki,scrape("http://countrycode.org/")
+
+root = lxml.html.fromstring(html)
+
+i = 0
+
+for tr in root.cssselect("#main_table_blue tbody tr")
+    i++
+    tds = tr.select("td")
+
+    iso = tds[1].text_content()
+    countryCode = tds[2].text_content()
+
+    isoSplit = iso.split('/')
+
+    data = {
+        'name': tds[0[.text_content().strip(),
+        'countryCode': int(countryCode),
+        'countryCodeUnique': i,
+        'ISO2': isoSplit[0].strip(),
+        'ISO3': isoSplit[1].strip()
+    }
+
