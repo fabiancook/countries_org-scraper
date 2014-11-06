@@ -32,7 +32,10 @@ i = 0
 
 for tr in root.cssselect("#main_table_blue tbody tr"):
     i = i + 1
-    tds = tr.select("td")
+    tds = tr.cssselect("td")
+
+    if len(tds) < 3:
+        continue
 
     iso = tds[1].text_content()
     countryCode = tds[2].text_content()
