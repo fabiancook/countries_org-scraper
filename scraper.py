@@ -31,7 +31,7 @@ root = lxml.html.fromstring(html)
 i = 0
 
 for tr in root.cssselect("#main_table_blue tbody tr"):
-    i++
+    i = i + 1
     tds = tr.select("td")
 
     iso = tds[1].text_content()
