@@ -22,9 +22,9 @@
 # is that your final data is written to an Sqlite database called data.sqlite in the current working directory which
 # has at least a table called data.
 import scraperwiki
-impot lxml.html
+import lxml.html
 
-html = scrperwiki,scrape("http://countrycode.org/")
+html = scraperwiki,scrape("http://countrycode.org/")
 
 root = lxml.html.fromstring(html)
 
