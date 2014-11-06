@@ -24,7 +24,7 @@
 import scraperwiki
 import lxml.html
 
-html = scraperwiki,scrape("http://countrycode.org/")
+html = scraperwiki.scrape("http://countrycode.org/")
 
 root = lxml.html.fromstring(html)
 
