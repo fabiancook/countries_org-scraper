@@ -47,3 +47,5 @@ for tr in root.cssselect("#main_table_blue tbody tr"):
         'ISO3': isoSplit[1].strip()
     }
 
+    scraperwiki.sqlite.save(unique_keys=[data['ISO3']], data=data)
+
